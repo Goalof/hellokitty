@@ -6,10 +6,19 @@ const pageStyles = {
     "2": {
         "background": "--color-darkL2"
     },
+    "3": {
+        "background": "--color-darkL2"
+    },
     "404": {
         "background": "--color-darkL2"
     },
     "index": {
+        "background": "--color-darkL2"
+    },
+    "about": {
+        "background": "--color-darkL2"
+    },
+    "contact": {
         "background": "--color-darkL2"
     }
 };

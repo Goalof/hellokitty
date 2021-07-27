@@ -6,7 +6,7 @@ import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml } from "@quarkly/components";
 export default (() => {
 	return <Theme theme={theme}>
-		<GlobalQuarklyPageStyles pageUrl={"404"} />
+		<GlobalQuarklyPageStyles pageUrl={"contact"} />
 		<Helmet>
 			<title>
 				Quarkly export

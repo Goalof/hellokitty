@@ -1,12 +1,13 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link } from "@quarkly/widgets";
+import { Theme, Link, Box, Section } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { RawHtml } from "@quarkly/components";
+import { RawHtml, Override } from "@quarkly/components";
+import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
-		<GlobalQuarklyPageStyles pageUrl={"404"} />
+		<GlobalQuarklyPageStyles pageUrl={"3"} />
 		<Helmet>
 			<title>
 				Quarkly export
@@ -14,6 +15,30 @@ export default (() => {
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
+		<Section padding="10px 0 10px 0" height="500px" background="#ffffff">
+			<Override slot="SectionContent" align-items="center" justify-content="center" overflow-x="hidden" />
+			<Components.MyVideo />
+			<Box className="video-widget" data-state="default" quarkly-title="video-widget" display="none">
+				<Box className="video-widget__container" quarkly-title="video-widget__container">
+					<Components.QuarklycommunityKitVideo
+						id="video-widget__video"
+						className="video-widget__video"
+						src="https://ukit.top/video-vidzhet.mp4"
+						width="120px"
+						playOnHover
+						autoPlay
+						muted
+						controls={false}
+					>
+						<Components.QuarklycommunityKitSource src="https://dl.dropboxusercontent.com/s/je2dxosey0k0r5q/beeline-cover.mp4?dl=0" />
+					</Components.QuarklycommunityKitVideo>
+					<Box className="video-widget__close" quarkly-title="video-widget__close" />
+					<Link className="video-widget__button" href="https://wa.me/87000000" quarkly-title="video-widget__button">
+						Оставить заявку
+					</Link>
+				</Box>
+			</Box>
+		</Section>
 		<Link
 			font={"--capture"}
 			font-size={"10px"}
